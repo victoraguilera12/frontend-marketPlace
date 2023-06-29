@@ -21,7 +21,7 @@ export default function login() {
 
   const iniciarSesion = async () => {
 
-    const urlServer = "http://localhost:3000";
+    const urlServer = "https://backend-marketplace-chi.vercel.app";
     const endpoint = "/usuarios/login";
     const { email, password } = usuario;
     try {

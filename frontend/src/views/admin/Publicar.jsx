@@ -40,7 +40,7 @@ export default function Publicar() {
 
   const crearPublicacionPost = () => {
     axiosInstance
-      .post("http://localhost:3000/publicacion", {
+      .post("https://backend-marketplace-5ntergt05-victoraguilera12.vercel.app/publicacion", {
         publicacion: publicacion,
         id_producto: articulo.id_producto, 
         id_servicio: articulo.id_servicio

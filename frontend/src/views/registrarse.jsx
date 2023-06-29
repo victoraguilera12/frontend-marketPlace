@@ -25,7 +25,7 @@ export default function registrarse() {
 
   const registrarUsuario = async (e) => {
     e.preventDefault();
-    const urlServer = "http://localhost:3000";
+    const urlServer = "https://backend-marketplace-chi.vercel.app";
     const endpoint = "/usuarios";
     try {
       await axios.post(urlServer + endpoint, usuario).then((res) => {

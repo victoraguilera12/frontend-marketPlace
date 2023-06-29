@@ -31,7 +31,7 @@ export default function Articulos({ onSelectedArticulo }) {
 
   const crearArticuloPOST = () => {
     axiosInstance
-      .post("http://localhost:3000/articulo", {
+      .post("https://backend-marketplace-5ntergt05-victoraguilera12.vercel.app/articulo", {
         tipo: tipo,
         articulo: articulo,
       })
@@ -62,7 +62,7 @@ export default function Articulos({ onSelectedArticulo }) {
   useEffect(() => {
     const getArticulos = async () => {
       axiosInstance
-        .get("http://localhost:3000/articulo/all/" + user?.id)
+        .get("https://backend-marketplace-chi.vercel.app/articulo/all/" + user?.id)
         .then((x) => {
           if (x.status != 200) {
             return;
@@ -82,7 +82,7 @@ export default function Articulos({ onSelectedArticulo }) {
         });
     };
     const getCategorias = async () => {
-      axiosInstance.get("http://localhost:3000/categorias").then((x) => {
+      axiosInstance.get("https://backend-marketplace-chi.vercel.app/categorias").then((x) => {
         if (x.status != 200) {
           toast.error("Ocurrió un error :( Intenta nuevamente mas tarde");
           return;

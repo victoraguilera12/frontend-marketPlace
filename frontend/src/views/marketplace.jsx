@@ -14,12 +14,12 @@ export default function Marketplace() {
   const { categories, setCategories } = useContext(CategoryContext)
   useEffect(() => {
     const getFromDB = async () => {
-      const response = await fetch("http://localhost:3000/test");
+      const response = await fetch("https://backend-marketplace-chi.vercel.app/test");
       console.log(await response.json());
     };
     getFromDB();
     const getCategorias = async () => {
-      const response = await fetch("http://localhost:3000/categorias")
+      const response = await fetch("https://backend-marketplace-chi.vercel.app/categorias")
       response.json().then(x => {
         setCategories(x);
       })
@@ -30,7 +30,7 @@ export default function Marketplace() {
 
   useEffect(() => {
     const getPublicacion = async () => {
-      const response = await fetch("http://localhost:3000/publicacion/all")
+      const response = await fetch("https://backend-marketplace-chi.vercel.app/publicacion/all")
         response.json().then(x=>{
           setData(x)
         })
